@@ -1,7 +1,7 @@
 # Project-2-DataVisualization
 Project-2-Team-5-DataVisualization
 
-The Challenge - If you choose to accpet it:
+The Challenge - If you choose to accept it:
 
   Your task is to tell a story with data visualisations.
   Focus on providing users an interactive way to explore data themselves.
@@ -31,17 +31,31 @@ The Requirements:
 The Timeline:
   Day 1 (Next Class)
   Start brainstorming topics with your group and researching potential datasets. Your focus be:
+  
         ● Selecting a topic
+        
         ● Finding a dataset
+        
         ● Finding inspiration
+        
         ● “Sketching” your ideal visuals
+        
         ● Creating a 1-page proposal
+        
   Day 2
+  
   You will need to create a one-page proposal that includes:
+  
       ● A brief articulation of your chosen topic and rationale
+      
       ● A link to your dataset(s) and a screenshot of the metadata, if it exists.
+      
       ● Three or four screenshots of relevant, “inspiring” visualisations that show your creative ideas
+      
       ● A sketch of the final design
+      
       ● A link to the primary GitHub repository where you’ll be housing your work
+      
   Day 3
+  
   Project Work
