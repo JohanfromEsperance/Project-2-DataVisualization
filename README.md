@@ -1,5 +1,5 @@
-# Project-2-DataVisualization
-Project-2-Team-5-DataVisualization
+# Project-3-DataVisualization
+Project-3Team-5-DataVisualization
 
 The Challenge - If you choose to accept it:
 
