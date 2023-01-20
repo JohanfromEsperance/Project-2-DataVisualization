@@ -17,17 +17,6 @@ var grayscaleMap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/
 // TES d3.csv load
 
 
-d3.csv("data.csv", function(data) {
-    for (var i = 0; i < data.length; i++) {
-        console.log(data[i].Title1);
-        console.log(data[i].Title2);
-        console.log(data[i].Title3);
-        console.log(data[i].Latitude);
-        console.log(data[i].Longitude);
-    }
-
-
-});
 
 var myMap = L.map("mapid", {
   center: [
@@ -40,18 +29,33 @@ var myMap = L.map("mapid", {
   // Sending our quakemap layer to the createMap function
   grayscaleMap.addTo(myMap);
 // Read markers data from data.csv
-  $.get('data.csv', function(csvString) {
+  $.get('new_master_data.csv', function(csvString) {
     // Use PapaParse to convert string to array of objects
   var data1 = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
     // For each row in data, create a marker and add it to the map
     // For each row, columns `Latitude`, `Longitude`, and `Title` are required
-  for (var i in data1) {
+    //(let i = 0; i < 10000; i++)
+    //(var i in data1)
+    var greenIcon = L.icon({
+      iconUrl: 'leaf-green.png',
+      shadowUrl: 'leaf-shadow.png',
+  
+      iconSize:     [38, 95], // size of the icon
+      shadowSize:   [50, 64], // size of the shadow
+      iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+      shadowAnchor: [4, 62],  // the same for the shadow
+      popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    })
+
+    for (var i in data1) {
     var row = data1[i];
     var marker = L.marker([row.Latitude, row.Longitude], {
-      opacity: 1
-    }).bindPopup(row.Title)
- 
+      icon: greenIcon
+    }).bindPopup("<h3>Asset Type: " + row.AssetType + "</h3><hr><p>Area: "
+    + row.Space + "</p><hr><p>Site: " + row.Site + "</p>"
+    + "</p><hr><p>Condition: " + row.ConditionRanking + "</p>"
+    + "</p><hr><p>Rating: " + row.ConditionPoint + "</p>"
+    + "</p><hr><p>This tag have been tested by Johan " + "</p>")
     marker.addTo(myMap);
-  }
-  
-  });
+
+  }});
