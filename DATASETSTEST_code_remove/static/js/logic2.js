@@ -2,6 +2,7 @@
 //https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
 // var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson";
+var url2 = "new_master_data.jason";
 //var url ="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_hour.geojson";
 //var url ="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson";
 
@@ -23,11 +24,15 @@ var grayscaleMap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/
 // Used Cairo as the centre to align all the circles in a full screen
 var myMap = L.map("mapid", {
   center: [
-    -33.8736,121.9016
+    30.0444,-31.2357
   ],
   zoom: 2,
   layers: [grayscaleMap, quakemap]
 });
+
+d3.json(url2,function(data){console.log(data);
+});
+
 
 d3.json(url, function(Data) {
   // Determine the marker size by magnitude
@@ -95,22 +100,4 @@ d3.json(url, function(Data) {
     return div;
   };
   legend.addTo(myMap);
-
-  // Read markers data from data.csv
-  $.get('data.csv', function(csvString) {
-    // Use PapaParse to convert string to array of objects
-    var data1 = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
-    // For each row in data, create a marker and add it to the map
-    // For each row, columns `Latitude`, `Longitude`, and `Title` are required
-    for (var i in data1) {
-      var row = data1[i];
-  
-      var marker = L.marker([row.Latitude, row.Longitude], {
-         opacity: 1
-      }).bindPopup(row.Title);
-        
-      marker.addTo(myMap);
-      }
-  
-    });
 });

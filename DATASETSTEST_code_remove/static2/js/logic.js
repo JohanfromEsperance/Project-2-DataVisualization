@@ -29,7 +29,7 @@ var myMap = L.map("mapid", {
   // Sending our quakemap layer to the createMap function
   grayscaleMap.addTo(myMap);
 // Read markers data from data.csv
-  $.get('new_master_data.csv', function(csvString) {
+$.get('new_master_data.csv', function(csvString) {
     // Use PapaParse to convert string to array of objects
   var data1 = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
     // For each row in data, create a marker and add it to the map
@@ -40,8 +40,8 @@ var myMap = L.map("mapid", {
       iconUrl: 'leaf-green.png',
       shadowUrl: 'leaf-shadow.png',
   
-      iconSize:     [38, 95], // size of the icon
-      shadowSize:   [50, 64], // size of the shadow
+      iconSize:     [8, 10], // size of the icon
+      shadowSize:   [8, 16], // size of the shadow
       iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
       shadowAnchor: [4, 62],  // the same for the shadow
       popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
@@ -58,4 +58,4 @@ var myMap = L.map("mapid", {
     + "</p><hr><p>This tag have been tested by Johan " + "</p>")
     marker.addTo(myMap);
 
-  }});
+}});
