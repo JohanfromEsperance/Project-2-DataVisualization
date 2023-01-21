@@ -1,6 +1,15 @@
 # Project-3-DataVisualization
 Project-3Team-5-DataVisualization
 
+CURRENT STATUS
+Main Window and 3 Subwindows Termplate working - Data loaded for main page - popup and binder working
+![project3index1-MAINPAGE](https://user-images.githubusercontent.com/112832608/213841999-0281dc57-f58f-4322-94ad-d8440c2d783d.png)
+![project3index2-ASSET DATA ANALYSIS](https://user-images.githubusercontent.com/112832608/213842003-56914ff7-8082-44e6-818f-e6f33ece6e9e.png)
+![project3index3-DATA DOWNLOADS](https://user-images.githubusercontent.com/112832608/213842006-90a05f79-21ae-4e47-a007-bb0956a2ed49.png)
+![project3index4-MIANTENANCE VIDEO](https://user-images.githubusercontent.com/112832608/213842008-ff7c4939-c519-4b4e-8286-7eb7a6c165dd.png)
+
+
+
 The Challenge - If you choose to accept it:
 
   Your task is to tell a story with data visualisations.
