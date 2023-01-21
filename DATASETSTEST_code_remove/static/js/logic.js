@@ -2,7 +2,7 @@
 //https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
 // var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson";
-var url2 = "new_master_data.jason";
+//var url2 = "new_master_data.jason";
 //var url ="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_hour.geojson";
 //var url ="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson";
 
@@ -28,9 +28,6 @@ var myMap = L.map("mapid", {
   ],
   zoom: 2,
   layers: [grayscaleMap, quakemap]
-});
-
-d3.json(url2,function(data){console.log(data);
 });
 
 d3.json(url, function(Data) {
