@@ -35,28 +35,28 @@ let myMap = L.map("mapid", {
   layers: [grayscaleMap, quakemap]
 });
 
-// for the heatmapl cluster layer lesson 2 week 15 Solved 
-//Get the data with d3.
-//d3.json(url2),(function(response) {
+////// for the heatmapl cluster layer lesson 2 week 15 Solved 
+//////Get the data with d3.
+/////d3.json(url2),(function(response) {
 
-  // Create a new marker cluster group.
-  //let markers = L.markerClusterGroup();
+  ///// Create a new marker cluster group.
+  /////let markers = L.markerClusterGroup();
 
-  // Loop through the data.
-  //for (let i = 0; i < response.length; i++) { {console.log(response)};
+  ///// Loop through the data.
+  /////for (let i = 0; i < response.length; i++) { {console.log(response)};
 
-    // Set the data location property to a variable.
-    //let location = response[i].Latitude;
+    ///// Set the data location property to a variable.
+    /////let location = response[i].Latitude;
 
-    // Check for the location property.
-   // if (location) {
+    ///// Check for the location property.
+   ///// if (location) {
 
-      // Add a new marker to the cluster group, and bind a popup.
-      //markers1.addLayer(L.marker([response[i].Latitude[1], response[i].Latitude[0]])
-      //  .bindPopup(response[i].Condition_Point[i]));
-   // }
+      ///// Add a new marker to the cluster group, and bind a popup.
+      /////markers1.addLayer(L.marker([response[i].Latitude[1], response[i].Latitude[0]])
+      /////  .bindPopup(response[i].Condition_Point[i]));
+   ///// }
 
- // };
+ ///// };
 
   // Add our marker cluster layer to the map.
   //myMap.addLayer(markers);
@@ -66,7 +66,7 @@ let myMap = L.map("mapid", {
 d3.json(url, function(Data) {
   // Determine the marker size by magnitude
   function markerSize(Condition_Point) {
-    return Condition_Point * 2;
+    return Condition_Point * 3;
   };
 
   // Determine the marker color by depth
