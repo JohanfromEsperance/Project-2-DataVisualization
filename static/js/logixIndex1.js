@@ -15,7 +15,7 @@ var grayscaleMap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/
   tileSize: 512,
   maxZoom: 18,
   zoomOffset: -1,
-  id: "mapbox/outdoors-v12",
+  id: "mapbox/satellite-v9",
   accessToken: API_KEY
 });
 //mapbox://styles/mapbox/satellite-v9
