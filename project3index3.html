@@ -37,24 +37,40 @@
 	  </div> 
 	<!-- Content Section-->
 <!-- Content Section-->
-<div class="container">
-    <div class="row">
-      <div>
-        <div class="box">
-          <div class="jumbotron jumbotron-fluid">
-            <h1 class="display-2">This Page is for the public to access our data!</h1>
-            <p class="lead">
-              <button id="download-button">Click Here To Download Json File</button>
-            <br>  
-            <br>  
-              <button id="download-button2">Click Here To Download CSV File</button>
-            </p>
-          </div>
-      </div>
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Files</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        /* Add some custom styling */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .card {
+            width: 600px;
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        .btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Welcome to our Data Downloads</h1>
+            <p>Please select a file to download:</p>
+            <a href="https://github.com/JohanfromEsperance/Project-3-DataVisualization/blob/main/static/file/new_master_data.csv" download class="btn btn-primary">Download CSV File</a>
+            <a href="https://github.com/JohanfromEsperance/Project-3-DataVisualization/blob/main/static/file/data.json" download class="btn btn-primary">Download Json File</a>
+        </div>
     </div>
-  </div>
-
-</footer>
-<!-- Our JavaScript -->
-<script type="text/javascript" src="static/js/datadownload.js"></script>
+</body>
+</html>
