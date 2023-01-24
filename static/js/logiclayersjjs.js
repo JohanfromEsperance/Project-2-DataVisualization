@@ -26,7 +26,16 @@ var osm = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?a
    // attribution: '© OpenStreetMap'
 //});
 
-var streets = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png');
+//mapbox://styles/mapbox/outdoors-v12
+
+var streets = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+    attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
+    tileSize: 512,
+    maxZoom: 18,
+    zoomOffset: -1,
+    id: "mapbox/outdoors-v12",
+    accessToken: API_KEY 
+});
 
 var map = L.map('map', {
     center: [-33.8714, 121.8988],
@@ -35,12 +44,12 @@ var map = L.map('map', {
 });
 
 var baseMaps = {
-    "OpenStreetMap": osm,
+    "Sattelite Map": osm,
     "Mapbox Streets": streets
 };
 
 var overlayMaps = {
-    "Cities": cities
+    "Port Equipment": cities
 };
 
 var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
@@ -60,7 +69,14 @@ var Port = L.marker([-33.87220691	,121.898273]).bindPopup('Southern Ports'),
 
     
 var parks = L.layerGroup([Port, CBH, PORT]);
-var satellite = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png');
+var satellite = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+    attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
+    tileSize: 512,
+    maxZoom: 18,
+    zoomOffset: -1,
+    id: "mapbox/satellite-v9",
+    accessToken: API_KEY 
+});
 
 layerControl.addBaseLayer(satellite, "Site Locations");
 layerControl.addOverlay(parks, "PORT AREA");
