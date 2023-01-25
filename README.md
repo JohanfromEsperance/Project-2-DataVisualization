@@ -1,15 +1,15 @@
 # Project-3-DataVisualization
 
+Use the link to test drive the Project
 
 https://johanfromesperance.github.io/Project-3-DataVisualization/project3index6.html
 
 Project-3Team-5-DataVisualization
 
 CURRENT STATUS
-Main Window and 3 Subwindows Template working - Data loaded for main page - popup and binder working
+Main Window and 3 Subwindows Template working - Data loaded for Main Page
 
-https://github.com/JohanfromEsperance/Project-3-DataVisualization/blob/main/MAIN%20LANDING%20PAGE.png
-
+![MAIN LANDING PAGE](https://user-images.githubusercontent.com/112832608/214470563-c6e64ecc-356a-4aea-84d1-92ea23294ee8.png)
 
 ![project3index2-ASSET DATA ANALYSIS](https://user-images.githubusercontent.com/112832608/213842003-56914ff7-8082-44e6-818f-e6f33ece6e9e.png)
 ![project3index3-DATA DOWNLOADS](https://user-images.githubusercontent.com/112832608/213842006-90a05f79-21ae-4e47-a007-bb0956a2ed49.png)
