@@ -5,18 +5,37 @@ Use the link to test drive the Project
 https://johanfromesperance.github.io/Project-3-DataVisualization/project3index6.html
 
 Project-3Team-5-DataVisualization
+Understanding the Condition (State) of your Assets.
 
-CURRENT STATUS
-Main Window and 3 Subwindows Template working - Data loaded for Main Page
+As the owner of plant and equipmnet you always have to understand the conditon of your assets to make informed decision on where and when to spend valuable OPEX or CAPEX to maintain the service level of your assets.
 
-![MAIN LANDING PAGE](https://user-images.githubusercontent.com/112832608/214470563-c6e64ecc-356a-4aea-84d1-92ea23294ee8.png)
+It is therefore important to always as and answer the follwoing questions: 
 
-![project3index2-ASSET DATA ANALYSIS](https://user-images.githubusercontent.com/112832608/213842003-56914ff7-8082-44e6-818f-e6f33ece6e9e.png)
-![project3index3-DATA DOWNLOADS](https://user-images.githubusercontent.com/112832608/213842006-90a05f79-21ae-4e47-a007-bb0956a2ed49.png)
-![project3index4-MIANTENANCE VIDEO](https://user-images.githubusercontent.com/112832608/213842008-ff7c4939-c519-4b4e-8286-7eb7a6c165dd.png)
+        What do we own?
+        Where is it? 
+        What does it do? 
+        What is it supposed to do?
+        What is its condition?
+        What is its remnant life?
+        What did it cost? What revenue does it earn?
+        What does it cost to keep doing its OEM function?
+        What alternative/ opportunity do we have?
+        How do I know all of the above?-Visually Display it
 
+This Project Provide some insights into some of these question through visualisation of the data 
+A Landing page provide a holistic overview of the equipmnet status through colour coding and sizing of teh markers using a colour index, and providing teh ability to click and view the detail:
+![MAIN PAGE](https://user-images.githubusercontent.com/112832608/215226013-94401cce-a0d9-466f-be84-6900bd5ba322.png)
 
+An Analysis page provide the information as a layer that details teh distribution of the condition data:
+![ANALYSIS PAGE](https://user-images.githubusercontent.com/112832608/215226035-94699f66-0e8c-44cc-aa2f-bdaae12d8101.png)
+Subsequent analys can then be done by exproting the data:
+![DATA DOWNLOAD](https://user-images.githubusercontent.com/112832608/215226045-1d17d28f-85a3-4a20-9d2e-68e106e56494.png)
+Maintenance is a special craft and we provide a vido to coach and mentor on teh imprtance of lubrication:
+![VIDEO PAGE](https://user-images.githubusercontent.com/112832608/215226056-60a3a0a9-b5ef-4678-afba-89781e5da277.png)
+To fully Understand where teh assets are and identify larger structures a webage allow syou to select layers with data
+![LAYER FAILED](https://user-images.githubusercontent.com/112832608/215226072-58cdf09d-4ad6-4576-90c3-48334b61c8c5.png)
 
+----------------------------------------------------------------------------------------------------------------------------
 The Challenge - If you choose to accept it:
 
   Your task is to tell a story with data visualisations.
