@@ -1,87 +1,149 @@
 <!DOCTYPE html>
-	<html lang="en">
-	<head>
-	    <meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>Project-3-Group5-Data Viualisation</title>
-	    <!-- Bootstrap CSS -->
-	    <link rel="stylesheet" href=https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-		<!-- Our CSS -->
-		<link rel="stylesheet" type="text/css" href="static/css/style.css">
-
-	
-	</head>
-	<body id="comparison">
-	    <!-- Navigation Section -->
-	    <div class="navigation">      
-	      <nav class="navbar navbar-expand-lg navbar-light bg-info">
-	        <a class="navbar-brand" href="project3index1.html">MAIN PAGE-ASSET CONDITION OVERVIEW</a>            
-	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-	           aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
-	            <span class="navbar-toggler-icon"></span>
-	        </button>
-	        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-	          <ul class="nav nav-tabs">
-	            <li class="nav-item">
-					<a class="nav-item nav-link active" href="project3index2.html">ASSET DATA ANALYSIS</a>
-	            </li>
-	            <li class="nav-item">
-	              <a class="nav-item nav-link active" href="project3index3.html">DATA DOWNLOADS</a>
-	            </li>
-				<li class="nav-item">
-					<a class="nav-item nav-link active" href="project3index4.html">MAINTENANCE VIDEO</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-item nav-link active" href="project3index6.html">SITE LAYOUT DATA</a>
-					</li>
-	          </ul>
-	        </div>            
-	      </nav>       
-	  
-	  </div> 
-	<!-- Content Section-->
-<!-- Content Section-->
-<div class="container">
-	<div class="row">
-		<div class="col-md-2">
-		  <div class="well">
-			<h5><strong> Sample ID Number_TEST5:</strong></h5>
-			<select id="selDataset" onchange="optionChanged(this.value)"></select>
-		  </div>
-		  <div style="width:150px" class="panel panel-primary">
-			<div class="panel-heading">
-			  <h3 class="panel-title">Demographic Information</h3>
-			</div>
-			<div id="sample-metadata" class="panel-body"></div>
-		  </div>
-		</div>
-		<div class="col-md-5">
-		  <div id="bar"></div>
-		</div>
-		<div class="col-md-5">
-		  <div id="bubble"></div>
-		</div>
+<html>
+<head>
+  <title>My Bar Chart</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project-3-Group5-Data Viualisation</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body id="comparison">
+  <!-- Navigation Section -->
+  <div class="navigation">      
+      <nav class="navbar navbar-expand-lg navbar-light bg-info">
+          <a class="navbar-brand" href="project3index1.html">MAIN PAGE-ASSET CONDITION OVERVIEW</a>            
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                      <a class="nav-item nav-link active" href="project3index2.html">ASSET DATA ANALYSIS</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-item nav-link active" href="project3index3.html">DATA DOWNLOADS</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-item nav-link active" href="project3index4.html">MAINTENANCE VIDEO</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-item nav-link active" href="project3index6.html">SITE LAYOUT DATA</a>
+                  </li>
+              </ul>
+          </div>            
+      </nav>       
   </div>
+  <div id="myDiv"></div>
+  <div id="myDiv2"></div>
+  
+  <script>
+    var data = [{"Condition Point": "2", "Count": 1}, {"Condition Point": "3", "Count": 924}, {"Condition Point": "4", "Count": 47}, {"Condition Point": "5", "Count": 8}];
+    var data2 = [{"0": 0, "1": 0, "2": 0, "3": 5, "4": 0, "5": 0, "Level": "Apex (Top)"}, {"0": 0, "1": 0, "2": 0, "3": 10, "4": 0, "5": 0, "Level": "Basement"}, {"0": 0, "1": 0, "2": 1, "3": 816, "4": 40, "5": 7, "Level": "Ground"}, {"0": 0, "1": 0, "2": 0, "3": 70, "4": 3, "5": 0, "Level": "Level 1"}, {"0": 0, "1": 0, "2": 0, "3": 23, "4": 4, "5": 1, "Level": "Level 2"}];
+    var x = data.map(function(d) { return d["Condition Point"]; });
+    var y = data.map(function(d) { return d["Count"]; });
+    var trace = {
+        x: x,
+        y: y,
+        type: 'bar'
+    };
+    var layout = {
+        title: 'Number of Condition Point'
+    };
+    Plotly.newPlot('myDiv', [trace], layout);
 
-</footer>
-	   
-	  <!-- Bootstrap JS -->
-	    <script src=https://code.jquery.com/jquery-3.5.1.slim.min.js integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	    <script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	    <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-	</body>
-	</html>
+    var x2 = data2.map(function(d) { return d["Level"]; });
+    var y2_0 = data2.map(function(d) { return d["0"]; });
+    var y2_1 = data2.map(function(d) { return d["1"]; });
+    var y2_2 = data2.map(function(d) { return d["2"]; });
+    var y2_3 = data2.map(function(d) { return d["3"]; });
+    var y2_4 = data2.map(function(d) { return d["4"]; });
+    var y2_5 = data2.map(function(d) { return d["5"]; });
+    var trace2_0 = {
+        x: x2,
+        y: y2_0,
+        name: "0",
+        type: 'bar'
+    };
+    var trace2_1 = {
+        x: x2,
+        y: y2_1,
+        name: "1",
+        type: 'bar'
+    };
+    var trace2_2 = {
+        x: x2,
+        y: y2_2,
+        name: "2",
+        type: 'bar'
+    };
+    var trace2_3 = {
+        x: x2,
+        y: y2_3,
+        name: "3",
+        type: 'bar'
+    };
+    var trace2_4 = {
+        x: x2,
+        y: y2_4,
+        name: "4",
+        type: 'bar'
+    };
+    var trace2_5 = {
+        x: x2,
+        y: y2_5,
+        name: "5",
+        type: 'bar'
+    };
+    var layout2 = {
+    title: 'Count of Condition Point per Level',
+    barmode: 'group',
+    updatemenus: [{
+        buttons: [{
+            label: 'Condition Point',
+            method: 'update',
+            args: [{visible: [true, true, true, true, true, true]}, {title: 'Count of Condition Point per Level'}]
+        }, {
+            label: '0',
+            method: 'update',
+            args: [{visible: [true, false, false, false, false, false]}, {title: 'Count of Condition Point per Level (0)'}]
+        }, {
+            label: '1',
+            method: 'update',
+            args: [{visible: [false, true, false, false, false, false]}, {title: 'Count of Condition Point per Level (1)'}]
+        }, {
+            label: '2',
+            method: 'update',
+            args: [{visible: [false, false, true, false, false, false]}, {title: 'Count of Condition Point per Level (2)'}]
+        }, {
+            label: '3',
+            method: 'update',
+            args: [{visible: [false, false, false, true, false, false]}, {title: 'Count of Condition Point per Level (3)'}]
+        }, {
+            label: '4',
+            method: 'update',
+            args: [{visible: [false, false, false, false, true, false]}, {title: 'Count of Condition Point per Level (4)'}]
+        }, {
+            label: '5',
+            method: 'update',
+            args: [{visible: [false, false, false, false, false, true]}, {title: 'Count of Condition Point per Level (5)'}]
+        }],
+        type: 'dropdown',
+        x: 0.1,
+        y: 1.1
+    }]
+};
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-	<!-- <script src="app7.js"></script> --> 
-	<script type="text/javascript" src="static/js/app7.js"></script>
+    Plotly.newPlot('myDiv2', [trace2_0, trace2_1, trace2_2, trace2_3, trace2_4, trace2_5], layout2);
 
-   <!-- jQuery CDN --> 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    
+</script>
 
-    <!-- Bootstrap CDN -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  </body>
 
+
+</body>
 </html>
