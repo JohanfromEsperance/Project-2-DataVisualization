@@ -82,7 +82,7 @@ d3.json(url, function(Data) {
                       "</p><hr><p>Asset Name: " + feature.properties.Asset_Type +"</p>"
                       + "</p><hr><p>Condition: " + feature.properties.Condition_Ranking + "</p>"
                       + "</p><hr><p>Rating: " + feature.properties.Condition_Point + "</p>"
-                      + "</p><hr><p>This tag have been tested by Johan " + "</p>");
+                      + "</p><hr><p>This data uses geoJSON features " + "</p>");
     }
   }).addTo(quakemap);
 

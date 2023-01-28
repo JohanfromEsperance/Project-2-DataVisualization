@@ -8,7 +8,7 @@ var Berth1 = L.marker([-33.87149496	,121.8988605]).bindPopup('This is Berth 1.')
     Shed4    = L.marker([-33.87543209	,121.9017099]).bindPopup('This is Shed 4.'),
     Shed5    = L.marker([-33.87471224	,121.9030718]).bindPopup('This is Shed 5.'),
     Shed6    = L.marker([-33.87220691	,121.898273]).bindPopup('This is Shed 6.'),
-    ShipLoader    = L.marker([-33.86940091, 121.9020749]).bindPopup('This is the Ship Loader');
+    ShipLoader    = L.marker([-33.86940091, 121.9020749]).bindPopup('This is the Ship Loader, in the water');
 
 var cities = L.layerGroup([Berth1,Berth2,Berth3,ContainerCrane,Shed1,Shed2,Shed3,Shed4,Shed5,Shed6,ShipLoader]); 
 
