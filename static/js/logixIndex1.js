@@ -95,7 +95,7 @@ d3.json(url, function(Data) {
     var div = L.DomUtil.create("div", "info legend"),
     Condition_Point = [1,2,3,4,5];
     
-    div.innerHTML += "<h3 style='text-align: center'>Asset Condition Index</h3>"
+    div.innerHTML += "<h3 style='text-align: center'>Asset Condition Index</h3>"+ "</p><hr><p>GREEN - NEW" + "</p>"
   for (var i =0; i < Condition_Point.length; i++) {
     div.innerHTML += 
     '<i style="background:' + chooseColor(Condition_Point[i]) + '"></i> ' +
