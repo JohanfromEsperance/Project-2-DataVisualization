@@ -23,8 +23,8 @@ var grayscaleMap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/
 //mapbox://styles/mapbox/satellite-v9
 //mapbox://styles/mapbox/outdoors-v12
 
-d3.json(url,function(data2) {console.log(data2);});
-d3.json(url2,function(data3) {console.log(data3);});
+d3.json("new_master_datamon2323.geojson",function(data2) {console.log(data2);});
+d3.json("new_master_data1.json",function(data3) {console.log(data3);});
 // 121.899851,-33.87269823 
 
 let myMap = L.map("mapid", {
