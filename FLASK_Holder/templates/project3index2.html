@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Bar Chart</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project-3-Group5-Data Viualisation</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body id="comparison">
+  <!-- Navigation Section -->
+  <div class="navigation">      
+      <nav class="navbar navbar-expand-lg navbar-light bg-info">
+          <a class="navbar-brand" href="project3index1.html">MAIN PAGE-ASSET CONDITION OVERVIEW</a>            
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                      <a class="nav-item nav-link active" href="project3index2.html">ASSET DATA ANALYSIS</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-item nav-link active" href="project3index3.html">DATA DOWNLOADS</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-item nav-link active" href="project3index4.html">MAINTENANCE VIDEO</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-item nav-link active" href="project3index6.html">SITE LAYOUT DATA</a>
+                  </li>
+              </ul>
+          </div>            
+      </nav>       
+  </div>
+  <div id="myDiv"></div>
+  <div id="myDiv2"></div>
+  
+  <script>
+    var data = {{ data|tojson|safe }};
+    var data2 = {{ data2|tojson|safe }};
+    var x = data.map(function(d) { return d["Condition Point"]; });
+    var y = data.map(function(d) { return d["Count"]; });
+    var trace = {
+        x: x,
+        y: y,
+        type: 'bar'
+    };
+    var layout = {
+        title: 'Number of Condition Point'
+    };
+    Plotly.newPlot('myDiv', [trace], layout);
+
+    var x2 = data2.map(function(d) { return d["Level"]; });
+    var y2_0 = data2.map(function(d) { return d["0"]; });
+    var y2_1 = data2.map(function(d) { return d["1"]; });
+    var y2_2 = data2.map(function(d) { return d["2"]; });
+    var y2_3 = data2.map(function(d) { return d["3"]; });
+    var y2_4 = data2.map(function(d) { return d["4"]; });
+    var y2_5 = data2.map(function(d) { return d["5"]; });
+    var trace2_0 = {
+        x: x2,
+        y: y2_0,
+        name: "0",
+        type: 'bar'
+    };
+    var trace2_1 = {
+        x: x2,
+        y: y2_1,
+        name: "1",
+        type: 'bar'
+    };
+    var trace2_2 = {
+        x: x2,
+        y: y2_2,
+        name: "2",
+        type: 'bar'
+    };
+    var trace2_3 = {
+        x: x2,
+        y: y2_3,
+        name: "3",
+        type: 'bar'
+    };
+    var trace2_4 = {
+        x: x2,
+        y: y2_4,
+        name: "4",
+        type: 'bar'
+    };
+    var trace2_5 = {
+        x: x2,
+        y: y2_5,
+        name: "5",
+        type: 'bar'
+    };
+    var layout2 = {
+    title: 'Count of Condition Point per Level',
+    barmode: 'group',
+    updatemenus: [{
+        buttons: [{
+            label: 'Condition Point',
+            method: 'update',
+            args: [{visible: [true, true, true, true, true, true]}, {title: 'Count of Condition Point per Level'}]
+        }, {
+            label: '0',
+            method: 'update',
+            args: [{visible: [true, false, false, false, false, false]}, {title: 'Count of Condition Point per Level (0)'}]
+        }, {
+            label: '1',
+            method: 'update',
+            args: [{visible: [false, true, false, false, false, false]}, {title: 'Count of Condition Point per Level (1)'}]
+        }, {
+            label: '2',
+            method: 'update',
+            args: [{visible: [false, false, true, false, false, false]}, {title: 'Count of Condition Point per Level (2)'}]
+        }, {
+            label: '3',
+            method: 'update',
+            args: [{visible: [false, false, false, true, false, false]}, {title: 'Count of Condition Point per Level (3)'}]
+        }, {
+            label: '4',
+            method: 'update',
+            args: [{visible: [false, false, false, false, true, false]}, {title: 'Count of Condition Point per Level (4)'}]
+        }, {
+            label: '5',
+            method: 'update',
+            args: [{visible: [false, false, false, false, false, true]}, {title: 'Count of Condition Point per Level (5)'}]
+        }],
+        type: 'dropdown',
+        x: 0.1,
+        y: 1.1
+    }]
+};
+
+    Plotly.newPlot('myDiv2', [trace2_0, trace2_1, trace2_2, trace2_3, trace2_4, trace2_5], layout2);
+
+    
+</script>
+
+
+
+</body>
+</html>
