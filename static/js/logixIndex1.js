@@ -1,8 +1,11 @@
 // Define quakemap plates GeoJSON url variable
 //https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
 // var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
-var url = "new_master_datamon2323.geojson";
+//var url = "new_master_datamon2323.geojson";
 var url2 = "new_master_data1.json";
+
+var url = "static/data/new_master_datamon2323.geojson";
+
 //var url ="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_hour.geojson";
 //var url ="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson";
 
