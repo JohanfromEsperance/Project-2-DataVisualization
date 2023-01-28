@@ -1,11 +1,11 @@
 // Define quakemap plates GeoJSON url variable
 
 
-//var url = "new_master_datamon2323.geojson";
-//var url2 = "new_master_data1.json";
+var url = "new_master_datamon2323.geojson";
+var url2 = "new_master_data1.json";
 
-var url = "data/new_master_datamon2323.geojson";
-var url2 = "data/new_master_data1.json";
+//var url = "data/new_master_datamon2323.geojson";
+//var url2 = "data/new_master_data1.json";
 
 // Create layerGroup
 let quakemap = L.layerGroup();
