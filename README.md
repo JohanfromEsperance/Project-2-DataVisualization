@@ -7,9 +7,9 @@ https://johanfromesperance.github.io/Project-3-DataVisualization/project3index6.
 Project-3Team-5-DataVisualization
 Understanding the Condition (State) of your Assets.
 
-As the owner of plant and equipmnet you always have to understand the conditon of your assets to make informed decision on where and when to spend valuable OPEX or CAPEX to maintain the service level of your assets.
+As the owner of plant and equipmnet you always have to understand the conditon of your assets to make informed decisions on where and when to spend valuable OPEX or CAPEX to maintain the service level of your assets.
 
-It is therefore important to always as and answer the follwoing questions: 
+It is therefore important to always ask and answer the following questions: 
 
         What do we own?
         Where is it? 
@@ -23,16 +23,24 @@ It is therefore important to always as and answer the follwoing questions:
         How do I know all of the above?-Visually Display it
 
 This Project Provide some insights into some of these question through visualisation of the data 
-A Landing page provide a holistic overview of the equipmnet status through colour coding and sizing of teh markers using a colour index, and providing teh ability to click and view the detail:
+A Landing page provide a holistic overview of the equipmnet status through colour coding and sizing of the markers using a colour index, and providing the ability to click and view the detail:
+
 ![MAIN PAGE](https://user-images.githubusercontent.com/112832608/215226013-94401cce-a0d9-466f-be84-6900bd5ba322.png)
 
-An Analysis page provide the information as a layer that details teh distribution of the condition data:
+An Analysis page provide the information as a layer that details the distribution of the condition data:
+
 ![ANALYSIS PAGE](https://user-images.githubusercontent.com/112832608/215226035-94699f66-0e8c-44cc-aa2f-bdaae12d8101.png)
-Subsequent analys can then be done by exproting the data:
+
+Subsequent analysis can then be done by exporting the data:
+
 ![DATA DOWNLOAD](https://user-images.githubusercontent.com/112832608/215226045-1d17d28f-85a3-4a20-9d2e-68e106e56494.png)
-Maintenance is a special craft and we provide a vido to coach and mentor on teh imprtance of lubrication:
+
+Maintenance is a special craft and we provide a video to coach and mentor on the importance of lubrication:
+
 ![VIDEO PAGE](https://user-images.githubusercontent.com/112832608/215226056-60a3a0a9-b5ef-4678-afba-89781e5da277.png)
-To fully Understand where teh assets are and identify larger structures a webage allow syou to select layers with data
+
+To fully Understand where the assets are and identify larger structures, a webage allows you to select layers with data.
+
 ![LAYER FAILED](https://user-images.githubusercontent.com/112832608/215226072-58cdf09d-4ad6-4576-90c3-48334b61c8c5.png)
 
 ----------------------------------------------------------------------------------------------------------------------------
