@@ -4,8 +4,8 @@
 //var url = "new_master_datamon2323.geojson";
 //var url2 = "new_master_data1.json";
 
-var url = "static/data/new_master_datamon2323.geojson";
-var url2 = "static/new_master_data1.json";
+var url = "data/new_master_datamon2323.geojson";
+var url2 = "data/new_master_data1.json";
 
 // Create layerGroup
 let quakemap = L.layerGroup();
@@ -95,7 +95,12 @@ d3.json(url, function(Data) {
     var div = L.DomUtil.create("div", "info legend"),
     Condition_Point = [1,2,3,4,5];
     
-    div.innerHTML += "<h3 style='text-align: center'>Asset Condition Index</h3>"+ "</p><hr><p>GREEN - NEW" + "</p>"
+    div.innerHTML += "<h3 style='text-align: center'>Asset Condition Index</h3>"
+                  + "</p><hr><p>GREEN - NEW" + "</p>" 
+                  + "</p><hr><p>BLUE - Maintenance plan required" + "</p>"
+                  + "</p><hr><p>YELLOW - Maintenance repairs required" + "</p>"
+                  + "</p><hr><p>ORANGE - Immediate repairs required" + "</p>"
+                  + "</p><hr><p>RED - Replace/ Refurbish" + "</p>"
   for (var i =0; i < Condition_Point.length; i++) {
     div.innerHTML += 
     '<i style="background:' + chooseColor(Condition_Point[i]) + '"></i> ' +
