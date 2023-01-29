@@ -2,12 +2,14 @@
 
 Use the link to test drive the Project
 
+FINAL SUBMISSION:
+
 https://johanfromesperance.github.io/Project-3-DataVisualization/project3index6.html
 
 Project-3Team-5-DataVisualization
 Understanding the Condition (State) of your Assets.
 
-As the owner of plant and equipmnet you always have to understand the conditon of your assets to make informed decisions on where and when to spend valuable OPEX or CAPEX to maintain the service level of your assets.
+As the owner of plant and equipment you always have to understand the conditon of your assets to make informed decisions on where and when to spend valuable OPEX or CAPEX to maintain the service level of your assets.
 
 It is therefore important to always ask and answer the following questions: 
 

@@ -1,4 +1,5 @@
 // Define quakemap plates GeoJSON url variable
+//Reused the code from Week 15 website and changed sizing and index
 
 
 var url = "new_master_datamon2323.geojson";
@@ -36,7 +37,7 @@ let myMap = L.map("mapid", {
 });
 
 d3.json(url, function(Data) {
-  // Determine the marker size by magnitude
+  // Determine the marker size by condition grade
   function markerSize(Condition_Point) {
     return Condition_Point * 3;
   };

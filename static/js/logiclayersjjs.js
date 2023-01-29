@@ -1,3 +1,7 @@
+//THsi was quite challenging, I planned to put this code into teh primary logic, but the d3.geoJSON loop crashed.
+//The data is static and is used for identification of locations
+
+
 var Berth1 = L.marker([-33.87149496	,121.8988605]).bindPopup('This is Berth 1.'),
     Berth2    = L.marker([-33.87236113	,121.9001696]).bindPopup('This is Berth2.'),
     Berth3    = L.marker([-33.86940091	,121.9044669]).bindPopup('This is Berth 3.'),
